@@ -11,7 +11,7 @@ int Handle::driver(char *requested_data, int bytesreceived,int active_clt,manySe
     }
     try
     {
-        // std::cout<<"000000000::"<<std::string("").append(requested_data, bytesreceived)<<"$"<<std::endl;
+        // std::cout<<"000000000::"<<std::string("").append(requested_data, bytesreceived)<<"$"<<std::endl;  test
         if (clients[active_clt].req.parse_request(std::string("").append(requested_data, bytesreceived)))
         {
             if (clients[active_clt].req.get_method() == "GET")
